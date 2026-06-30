@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>StudentHub</h2>
+            </div>
+
+            <ul>
+
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fas fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="courses.html">
+                        <i class="fas fa-book-open"></i>
+                        Courses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="assignments.html">
+                        <i class="fas fa-file-circle-check"></i>
+                        Assignments
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        <i class="fas fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+            <!-- TOP NAV -->
+
+            <header class="topbar">
+
+                <div class="left">
+
+                    <h1>Dashboard</h1>
+
+                    <p>Manage all your academic activities from one place.</p>
+
+                </div>
+
+                <div class="right">
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <i class="fas fa-search"></i>
+
+                        <input type="text" id="searchCourse" placeholder="Search course...">
+
+                    </div>
+
+                    <!-- Notification -->
+
+                    <button class="icon-btn">
+
+                        <i class="fas fa-bell"></i>
+
+                        <span class="badge">5</span>
+
+                    </button>
+
+                    <!-- User -->
+
+                    <div class="user-box">
+
+                        <img src="https://i.pravatar.cc/100" alt="Student">
+
+                        <div>
+
+                            <h4 id="studentName">
+                                John Doe
+                            </h4>
+
+                            <small>
+                                Computer Science
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- ================= DASHBOARD CONTENT START ================= -->
+
+            <section class="dashboard-container">
+                <!-- ================= WELCOME CARD ================= -->
+
+                <div class="welcome-card card">
+
+                    <div>
+
+                        <h2>Welcome Back, <span id="welcomeName">John Doe</span> 👋</h2>
+
+                        <p>
+                            Keep learning and stay ahead of your academic goals.
+                        </p>
+
+                    </div>
+
+                    <div class="datetime">
+
+                        <h3 id="currentDate">Tuesday, june 30, 2026</h3>
+
+                        <h1 id="currentTime">12:00:00 PM</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= STATISTICS ================= -->
+
+                <div class="stats-grid">
+
+                    <div class="card stat-card">
+
+                        <i class="fas fa-book-open stat-icon blue"></i>
+
+                        <div>
+
+                            <h3 id="courseCount">8</h3>
+
+                            <p>Total Courses</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card stat-card">
+
+                        <i class="fas fa-file-circle-check stat-icon green"></i>
+
+                        <div>
+
+                            <h3 id="assignmentCount">12</h3>
+
+                            <p>Assignments</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card stat-card">
+
+                        <i class="fas fa-check-circle stat-icon orange"></i>
+
+                        <div>
+
+                            <h3 id="completedCount">7</h3>
+
+                            <p>Completed</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card stat-card">
+
+                        <i class="fas fa-clock stat-icon red"></i>
+
+                        <div>
+
+                            <h3 id="pendingCount">5</h3>
+
+                            <p>Pending</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= MAIN GRID ================= -->
+
+                <div class="main-grid">
+
+
+                    <!-- ================= PROFILE CARD ================= -->
+
+                    <div class="card profile-card">
+
+                        <img id="profileImage" src="https://i.pravatar.cc/150?img=12" alt="Profile">
+
+                        <h2 id="profileName">
+
+                            John Doe
+
+                        </h2>
+
+                        <p id="department">
+
+                            Computer Science
+
+                        </p>
+
+                        <hr>
+
+                        <div class="profile-info">
+
+                            <p>
+
+                                <strong>Email</strong>
+
+                                <span id="profileEmail">
+                                    johndoe@email.com
+                                </span>
+
+                            </p>
+
+                            <p>
+
+                                <strong>Phone</strong>
+
+                                <span id="profilePhone">
+                                    +2348123456789
+                                </span>
+
+                            </p>
+
+                            <p>
+
+                                <strong>Level</strong>
+
+                                <span id="profileLevel">
+                                    300 Level
+                                </span>
+
+                            </p>
+
+                        </div>
+
+                        <button id="editProfileBtn">
+
+                            Edit Profile
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- ================= COURSE SUMMARY ================= -->
+
+                    <div class="card course-summary">
+
+                        <h2>
+
+                            Course Summary
+
+                        </h2>
+
+                        <br>
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Code</th>
+
+                                    <th>Course</th>
+
+                                    <th>Credit</th>
+
+                                    <th>Semester</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="courseTable">
+
+                                <tr>
+
+                                    <td>CSC301</td>
+
+                                    <td>Web Development</td>
+
+                                    <td>3</td>
+
+                                    <td>First</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>CSC305</td>
+
+                                    <td>Database Systems</td>
+
+                                    <td>3</td>
+
+                                    <td>First</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>MTH301</td>
+
+                                    <td>Numerical Methods</td>
+
+                                    <td>2</td>
+
+                                    <td>First</td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ATTENDANCE ================= -->
+
+                <div class="card attendance-card">
+
+                    <h2>
+
+                        Attendance Percentage
+
+                    </h2>
+
+                    <br>
+
+                    <div class="progress-item">
+
+                        <span>
+
+                            Web Development
+
+                        </span>
+
+                        <span>
+
+                            92%
+
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div class="progress width92"></div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="progress-item">
+
+                        <span>
+
+                            Database Systems
+
+                        </span>
+
+                        <span>
+
+                            85%
+
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div class="progress width85"></div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="progress-item">
+
+                        <span>
+
+                            Numerical Methods
+
+                        </span>
+
+                        <span>
+
+                            76%
+
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div class="progress width76"></div>
+
+                    </div>
+
+                </div>
+                <!-- ================= UPCOMING ASSIGNMENTS ================= -->
+
+                <div class="bottom-grid">
+
+                    <div class="card assignments-card">
+
+                        <div class="card-header">
+                            <h2>Upcoming Assignments</h2>
+                            <button class="add-btn">
+                                <i class="fas fa-plus"></i> Add
+                            </button>
+                        </div>
+
+                        <div id="assignmentList">
+
+                            <div class="assignment-item">
+
+                                <div>
+
+                                    <h4>Web Development Project</h4>
+
+                                    <small>Due: 10 July 2026</small>
+
+                                </div>
+
+                                <span class="priority high">
+                                    High
+                                </span>
+
+                            </div>
+
+                            <div class="assignment-item">
+
+                                <div>
+
+                                    <h4>Database ER Diagram</h4>
+
+                                    <small>Due: 14 July 2026</small>
+
+                                </div>
+
+                                <span class="priority medium">
+                                    Medium
+                                </span>
+
+                            </div>
+
+                            <div class="assignment-item">
+
+                                <div>
+
+                                    <h4>Numerical Methods Quiz</h4>
+
+                                    <small>Due: 18 July 2026</small>
+
+                                </div>
+
+                                <span class="priority low">
+                                    Low
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================= NOTIFICATIONS ================= -->
+
+                    <div class="card notification-card">
+
+                        <h2>Notifications</h2>
+
+                        <ul id="notificationList">
+
+                            <li>
+                                📢 Assignment submission closes tomorrow.
+                            </li>
+
+                            <li>
+                                📚 New course materials uploaded.
+                            </li>
+
+                            <li>
+                                📝 Mid-semester examination starts next week.
+                            </li>
+
+                            <li>
+                                🎉 Attendance above 65%.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= PERFORMANCE CHART ================= -->
+
+                <div class="card chart-card">
+
+                    <div class="card-header">
+
+                        <h2>Academic Performance</h2>
+
+                        <select id="semesterSelect">
+
+                            <option>First Semester</option>
+
+                            <option>Second Semester</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="chart">
+
+                        <div class="bar">
+                            <span>85%</span>
+                            <div class="fill html"></div>
+                            <p>HTML</p>
+                        </div>
+
+                        <div class="bar">
+                            <span>92%</span>
+                            <div class="fill css"></div>
+                            <p>CSS</p>
+                        </div>
+
+                        <div class="bar">
+                            <span>80%</span>
+                            <div class="fill js"></div>
+                            <p>JavaScript</p>
+                        </div>
+
+                        <div class="bar">
+                            <span>88%</span>
+                            <div class="fill db"></div>
+                            <p>Database</p>
+                        </div>
+
+                        <div class="bar">
+                            <span>78%</span>
+                            <div class="fill network"></div>
+                            <p>Networking</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= EDIT PROFILE MODAL ================= -->
+
+                <div class="modal" id="profileModal">
+
+                    <div class="modal-content">
+
+                        <span class="close-modal">&times;</span>
+
+                        <h2>Edit Profile</h2>
+
+                        <form id="profileForm">
+
+                            <input type="text" id="fullName" placeholder="Full Name">
+
+                            <input type="email" id="email" placeholder="Email">
+
+                            <input type="text" id="phone" placeholder="Phone Number">
+
+                            <input type="text" id="departmentInput" placeholder="Department">
+
+                            <input type="text" id="levelInput" placeholder="Level">
+
+                            <input type="text" id="imageURL" placeholder="Profile Image URL">
+
+                            <button type="submit">
+
+                                Save Changes
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TOAST NOTIFICATION ================= -->
+
+                <div id="toast">
+
+                    Profile Updated Successfully
+
+                </div>
+
+
+
+                <!-- ================= LOADER ================= -->
+
+                <div id="loader">
+
+                    <div class="spinner"></div>
+
+                </div>
+
+
+
+                <!-- ================= FOOTER ================= -->
+
+                <footer>
+
+                    <p>
+
+                        Smart Student Dashboard © 2026
+
+                    </p>
+
+                </footer>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="node.js"></script>
+
+</body>
+
+</html>
