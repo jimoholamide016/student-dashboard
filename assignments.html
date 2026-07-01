@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment Manager</title>
+
+<link rel="stylesheet" href="assignments.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+
+<div class="sidebar">
+
+    <h2>🎓 SSD</h2>
+
+    <a href="#">
+        <i class="fa fa-home"></i>
+        Dashboard
+    </a>
+
+    <a href="#">
+        <i class="fa fa-book"></i>
+        Courses
+    </a>
+
+    <a href="#" class="active">
+        <i class="fa fa-list-check"></i>
+        Assignments
+    </a>
+
+    <a href="#">
+        <i class="fa fa-user"></i>
+        Profile
+    </a>
+
+    <a href="#">
+        <i class="fa fa-cog"></i>
+        Settings
+    </a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Assignment Manager</h1>
+
+        <button id="openModal">
+            <i class="fa fa-plus"></i>
+            Add Assignment
+        </button>
+
+    </div>
+
+    <div class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search assignment">
+
+        <select id="filter">
+
+            <option value="all">
+                All
+            </option>
+
+            <option value="Pending">
+                Pending
+            </option>
+
+            <option value="Completed">
+                Completed
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Course</th>
+                    <th>Assignment</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="assignmentTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <span id="close">&times;</span>
+
+        <h2>Add Assignment</h2>
+
+        <form id="assignmentForm">
+
+            <input
+                type="hidden"
+                id="editIndex">
+
+            <input
+                type="text"
+                id="course"
+                placeholder="Course Code">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Assignment Title">
+
+            <input
+                type="date"
+                id="date">
+
+            <select id="priority">
+
+                <option value="">
+                    Select Priority
+                </option>
+
+                <option value="High">
+                    High
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="Low">
+                    Low
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Save Assignment
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="assignments.js"></script>
+
+</body>
+</html>
