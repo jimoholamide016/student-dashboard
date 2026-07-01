@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Management</title>
+<link rel="stylesheet" href="courses.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+    <h2>🎓 SSD</h2>
+
+    <a href="#">
+        <i class="fa fa-home"></i>
+        Dashboard
+    </a>
+
+    <a href="#" class="active">
+        <i class="fa fa-book"></i>
+        Courses
+    </a>
+
+    <a href="#">
+        <i class="fa fa-list"></i>
+        Assignments
+    </a>
+
+    <a href="#">
+        <i class="fa fa-user"></i>
+        Profile
+    </a>
+
+    <a href="#">
+        <i class="fa fa-cog"></i>
+        Settings
+    </a>
+
+</div>
+
+<!-- Main -->
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Course Management</h1>
+
+        <button id="openModal">
+            <i class="fa fa-plus"></i>
+            Add Course
+        </button>
+
+    </div>
+
+    <!-- Search -->
+    <div class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search course...">
+
+        <select id="filter">
+
+            <option value="all">
+                All Semesters
+            </option>
+
+            <option value="First">
+                First Semester
+            </option>
+
+            <option value="Second">
+                Second Semester
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- Table -->
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Code</th>
+                    <th>Title</th>
+                    <th>Lecturer</th>
+                    <th>Credit</th>
+                    <th>Semester</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="courseTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <span id="close">&times;</span>
+
+        <h2>Add Course</h2>
+
+        <form id="courseForm">
+
+            <input
+                type="hidden"
+                id="editIndex">
+
+            <input
+                type="text"
+                id="code"
+                placeholder="Course Code">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Course Title">
+
+            <input
+                type="text"
+                id="lecturer"
+                placeholder="Lecturer">
+
+            <input
+                type="number"
+                id="credit"
+                placeholder="Credit Unit">
+
+            <select id="semester">
+
+                <option value="">
+                    Select Semester
+                </option>
+
+                <option value="First">
+                    First Semester
+                </option>
+
+                <option value="Second">
+                    Second Semester
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Save Course
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script src="courses.js"></script>
+
+</body>
+</html>
